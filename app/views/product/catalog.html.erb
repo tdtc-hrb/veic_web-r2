@@ -1,0 +1,27 @@
+<h1><%= @product.name %></h1>
+
+<div id="tabs-with-content">
+  <div class="tabs is-centered">
+    <ul>
+      <li><a>Home</a></li>
+      <li><a>Tech Parameters</a></li>
+    </ul>
+  </div>
+  <div>
+    <section class="tab-content">
+      <table class="table">
+        <tbody>
+          <td>
+            <%= image_tag "#{@image.name}" %>
+          </td>
+          <td>
+            <%= @product.description %>
+          </td>
+        </tbody>
+      </table>
+    </section>
+    <section class="tab-content">
+      <%= @parameter.ipxx %>
+    </section>
+  </div>
+</div>
