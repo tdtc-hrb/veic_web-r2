@@ -1,4 +1,5 @@
 # README
+  Screen Resolution: 1280x720
 
 # Model - Controller
 ```

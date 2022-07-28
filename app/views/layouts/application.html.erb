@@ -9,13 +9,21 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "app", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
 
   <body>
-    <div data-controller="hello">
-      <nav class="navbar" role="navigation" aria-label="dropdown navigation" data-hello-target="mymenu">
-      </nav>
+    <div class="columns is-multiline is-mobile">
+        <div data-controller="hello">
+          <nav class="navbar" role="navigation" aria-label="dropdown navigation" data-hello-target="mymenu">
+          </nav>
+        </div>
+        <div class="column is-three-quarters">
+            <%= yield %>
+        </div>
+        <div class="column">
+            <%= render 'shared/sidebar' %>
+        </div>
     </div>
-    <%= yield %>
   </body>
 </html>
