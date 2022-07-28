@@ -1,0 +1,7 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title + " - " + article.lang_id.to_s, article %>
+    </li>
+  <% end %>
+</ul>

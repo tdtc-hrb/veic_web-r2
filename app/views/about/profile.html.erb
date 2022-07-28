@@ -1,0 +1,9 @@
+<section>
+
+    <% @profiles.each do |profile| %>
+        <div>
+            <h4><%= raw(profile.title) %></h4>
+            <p><%= raw(profile.body) %></p>
+        </div>
+    <% end %>
+</section>

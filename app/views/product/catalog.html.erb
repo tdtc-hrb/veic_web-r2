@@ -3,7 +3,7 @@
 <div id="tabs-with-content">
   <div class="tabs is-centered">
     <ul>
-      <li><a>Home</a></li>
+      <li><a>Overview</a></li>
       <li><a>Tech Parameters</a></li>
     </ul>
   </div>
@@ -21,7 +21,36 @@
       </table>
     </section>
     <section class="tab-content">
-      <%= @parameter.ipxx %>
+      <table class="table table-striped" border="1">
+        <thead>
+            <tr>
+                <th>parameter name</th>
+                <th>parameter value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MTBF</td>
+                <td><%= @parameter.mtbf %></td>
+            </tr>
+            <tr>
+                <td>Voltage</td>
+                <td><%= @parameter.voltage %></td>
+            </tr>
+            <tr>
+                <td>Electricity</td>
+                <td><%= @parameter.electricity %></td>
+            </tr>
+            <tr>
+                <td>International Portection</td>
+                <td><%= @parameter.ipxx %></td>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td><%= @parameter.temperature %></td>
+            </tr>
+        </tbody>
+      </table>
     </section>
   </div>
 </div>

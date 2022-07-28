@@ -1,0 +1,9 @@
+<h1>news</h1>
+
+<ul>
+  <% @propagandas.each do |propaganda| %>
+    <li>
+      <%= link_to propaganda.title + " - " + propaganda.lang_id.to_s, propaganda %>
+    </li>
+  <% end %>
+</ul>

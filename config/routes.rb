@@ -5,6 +5,21 @@ Rails.application.routes.draw do
       get 'catalog'
     end
   end
+
+  resources :article
+  resources :home
+  resources :company do
+    get 'notices', on: :collection
+    get 'news', on: :collection
+  end
+  resources :about do
+    get 'innovations', on: :collection
+    get 'qualifications', on: :collection
+    get 'profile', on: :collection
+  end
+  resources :contact do
+    get 'tel', on: :collection
+  end
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "home#index"
 end

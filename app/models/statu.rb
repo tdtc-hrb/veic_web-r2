@@ -1,0 +1,2 @@
+class Statu < ApplicationRecord
+end

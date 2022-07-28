@@ -1,0 +1,45 @@
+    <div class="laImg">
+        <a id="largeLnk" href="/product/catalog?name=THDS&lang=4136" >
+            <img id="largeImg" src="<%= asset_path('THDS_rail.jpg') %>" alt="Large image" />
+        </a>
+    </div>
+    <div class="thumbs">
+      <a img_lnk="<%= asset_path('THDS_rail.jpg') %>" title="THDS" path="THDS">
+            <img src="<%= asset_path('THDS_rail-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('AEI_antenna.jpg') %>" title="车号自动识别" path="AEI">
+            <img src="<%= asset_path('AEI_antenna-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('TFDS_light.jpg') %>" title="TFDS" path="TFDS">
+            <img src="<%= asset_path('TFDS_light-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('TADS_car.jpg') %>" title="TADS" path="TADS">
+            <img src="<%= asset_path('TADS_car-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('ATC_car.jpg') %>" title="列车自动清洗" path="ATC">
+            <img src="<%= asset_path('ATC_car-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('HTK-M101.jpg') %>" title="HTK-M101" path="CHB">
+            <img src="<%= asset_path('HTK-M101-thumb.jpg') %>" />
+        </a>
+        <a img_lnk="<%= asset_path('HMIS_main.jpg') %>" title="HMIS" path="HMIS">
+            <img src="<%= asset_path('HMIS_main-thumb.jpg') %>" />
+        </a>
+    </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".thumbs a").hover(function(){
+        var largePath = $(this).attr("img_lnk");
+        var largeAlt = $(this).attr("title");
+
+        $("#largeImg").attr({ src: largePath, alt: largeAlt });
+
+        var productLnk = "/product/catalog?name=" + $(this).attr("path") + "&lang=4136";
+        $("#largeLnk").attr({ href: productLnk });
+
+         return false;
+    });
+
+});
+</script>
