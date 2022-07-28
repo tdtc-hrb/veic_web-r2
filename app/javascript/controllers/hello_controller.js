@@ -83,17 +83,17 @@ export default class extends Controller {
           "text": "enterprise profile",
           "order": "22",
           "parentId": "4",
-          "href": "About-profile" },
+          "href": "about/profile" },
         { "id": "3",
           "text": "enterprise qualifications",
           "order": "23",
           "parentId": "4",
-          "href": "About-qualifications" },
+          "href": "about/qualifications" },
         { "id": "14",
           "text": "technology innovations",
           "order": "23",
           "parentId": "4",
-          "href": "About-innovations" }
+          "href": "about/innovations" }
       ]
     };
 
@@ -108,37 +108,37 @@ export default class extends Controller {
           "text": "THDS",
           "order": "26",
           "parentId": "5",
-          "href": "Product-THDS" },
+          "href": "product/catalog?name=THDS&lang=4136" },
         { "id": "7",
           "text": "AEI",
           "order": "27",
           "parentId": "5",
-          "href": "Product-AEI" },
+          "href": "product/catalog?name=AEI&lang=4136" },
         { "id": "8",
           "text": "TFDS",
           "order": "28",
           "parentId": "5",
-          "href": "Product-TFDS" },
+          "href": "product/catalog?name=TFDS&lang=4136" },
         { "id": "9",
           "text": "TADS",
           "order": "29",
           "parentId": "5",
-          "href": "Product-TADS" },
+          "href": "product/catalog?name=TADS&lang=4136" },
         { "id": "10",
           "text": "ATC",
           "order": "30",
           "parentId": "5",
-          "href": "Product-ATC" },
+          "href": "product/catalog?name=ATC&lang=4136" },
         { "id": "11",
           "text": "CHB",
           "order": "31",
           "parentId": "5",
-          "href": "Product-CHB" },
+          "href": "product/catalog?name=CHB&lang=4136" },
         { "id": "12",
           "text": "HMIS",
           "order": "32",
           "parentId": "5",
-          "href": "Product-HMIS" }
+          "href": "product/catalog?name=HMIS&lang=4136" }
       ]
     };
 
@@ -153,12 +153,12 @@ export default class extends Controller {
           "text": "company news",
           "order": "34",
           "parentId": "13",
-          "href": "Company-news" },
+          "href": "company/news" },
         { "id": "16",
-          "text": "company notice",
+          "text": "company notices",
           "order": "35",
           "parentId": "13",
-          "href": "Company-notice" }
+          "href": "company/notices" }
       ]
     };
 
@@ -173,22 +173,22 @@ export default class extends Controller {
           "text": "Foreign Cooperation Dept.",
           "order": "37",
           "parentId": "17",
-          "href": "Contact-Foreign Cooperation" },
+          "href": "contact/tel?dept=Foreign%20Cooperation&lang=4136" },
         { "id": "19",
           "text": "Infrared Dept.",
           "order": "38",
           "parentId": "17",
-          "href": "Contact-Infrared" },
+          "href": "contact/tel?dept=Infrared&lang=4136" },
         { "id": "20",
           "text": "Vehicle Number Dept.",
           "order": "39",
           "parentId": "17",
-          "href": "Contact-Vehicle Number" },
+          "href": "contact/tel?dept=Vehicle%20Number&lang=4136" },
         { "id": "21",
           "text": "Urban Rail Transport Dept.",
           "order": "40",
           "parentId": "17",
-          "href": "Contact-Urban Rail Transport" }
+          "href": "contact/tel?dept=Urban%20Rail%20Transport&lang=4136" }
       ]
     };
 
