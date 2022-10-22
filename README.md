@@ -22,6 +22,11 @@ rails generate controller Contact --skip-routes -T
 
 
 # non-standard issues
+remove [old](https://github.com/heartcombo/devise/issues/4904#issuecomment-406136766)
+```
+./config/credentials.yml.enc
+```
+usage new
 
 ### Generate name
 ```
@@ -68,6 +73,7 @@ rake tmp:clear
 rake assets:precompile
 ```
 
+# Ref
 - [Rails 6.1 raises an error for impossible camelcase inflections](https://www.bigbinary.com/blog/rails-6-1-raises-error-for-impossible-camelcase-inflections)
 - [Rails Generate Model not using inflection rule](https://stackoverflow.com/q/44354541)
 - [Asset was not declared to be precompiled in production](https://unity-yuji.xyz/asset-was-not-declared-to-be-precompiled-in-production/)
