@@ -1,3 +1,3 @@
 //= link_tree ../images
 //= link_tree ../builds
-//= app.css
+//= link app.css
