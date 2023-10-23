@@ -145,5 +145,56 @@ You may need to repeat these three steps many times until you get to the latest 
 new_framework_defaults_7_1.rb
 ```
 
+## OS Issues
+
+### firewall
+部署数据库的服务器需要放行
+```
+3306
+```
+端口
+
+### file format
+```
+tdtc@tdtc410:~/veic_web-r2$ ./bin/dev
+/usr/bin/env: ‘bash\r’: No such file or directory
+```
+由于文件格式是Windows(CR LF), 
+需要变换到 Unix(LF).
+```
+rm ./bin/dev
+vi ./bin/dev
+sudo chmod +x ./bin/dev
+```
+
+## Version adjustment
+
+### Rails skip migrations
+config/environments/development.rb:
+```
+ # Raise an error on page load if there are pending migrations.
+  config.active_record.migration_error = :page_load
+```
+=>
+```
+ # Raise an error on page load if there are pending migrations.
+  config.active_record.migration_error = false
+```
+
+### app css
+> app/views/layouts
+application.html.erb(Ln10):
+```
+ <%= stylesheet_link_tag "app", "data-turbo-track": "reload" %>
+```
+=>    
+application.html.erb(Ln9):
+```
+ <%= stylesheet_link_tag "application", "app", "data-turbo-track": "reload" %>
+```
+
+
 # Ref
 - [How to Update your Rails Application to the Latest Version](https://reinteractive.com/articles/How-to-update-your-Rails-application-to-the-latest-version-7-0-1)
+- [How to Ignore Pending Rails Migrations](https://www.fatosmorina.com/how-to-ignore-pending-rails-migrations/)
+- [Linking to CSS Files with the stylesheet_link_tag](https://guides.rubyonrails.org/v7.1/layouts_and_rendering.html#linking-to-javascript-files-with-the-javascript-include-tag)
